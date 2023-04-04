@@ -1,9 +1,13 @@
 package com.api.projetodevsuperior.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_department")
+@OnDelete(action = OnDeleteAction.CASCADE)
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
